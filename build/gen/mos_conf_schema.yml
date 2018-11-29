@@ -1,0 +1,121 @@
+- - i2c
+  - o
+  - title: I2C settings
+- - i2c.enable
+  - b
+  - false
+  - title: Enable I2C
+- - i2c.freq
+  - i
+  - 100000
+  - title: Clock frequency
+- - i2c.debug
+  - b
+  - false
+  - title: Debug I2C bus activity
+- - i2c.unit_no
+  - i
+  - 0
+  - title: Which hardware unit ot use, 0 or 1
+- - i2c.sda_gpio
+  - i
+  - 32
+  - title: GPIO to use for SDA
+- - i2c.scl_gpio
+  - i
+  - 33
+  - title: GPIO to use for SCL
+- - sys.atca
+  - o
+  - title: CryptoAuthLib configuration
+- - sys.atca.enable
+  - b
+  - false
+  - title: Enable the chip
+- - sys.atca.i2c_addr
+  - i
+  - 96
+  - title: I2C address of the chip
+- - sys.atca.ecdh_slots_mask
+  - i
+  - 12
+  - title: Which slots can be used for ECDH (bitmask)
+- - debug.mbedtls_level
+  - i
+  - 1
+  - title: mbedTLS debug level
+- - rpc
+  - o
+  - title: RPC settings
+- - rpc.enable
+  - b
+  - true
+  - title: Enable RPC
+- - rpc.max_frame_size
+  - i
+  - 4096
+  - title: Max Frame Size
+- - rpc.max_queue_length
+  - i
+  - 25
+  - title: Max Queue Length
+- - rpc.default_out_channel_idle_close_timeout
+  - i
+  - 10
+  - title: Default idle close timeout for outbound channels
+- - rpc.acl_file
+  - s
+  - title: File with RPC ACL JSON
+- - rpc.auth_domain
+  - s
+  - title: Realm to use for digest authentication
+- - rpc.auth_file
+  - s
+  - title: File with user credentials in the htdigest format
+- - rpc.ws
+  - o
+  - title: RPC over WebSocket settings
+- - rpc.ws.enable
+  - b
+  - true
+  - title: Enable RPC over WebSocket
+- - rpc.ws.server_address
+  - s
+  - ""
+  - title: Cloud server address
+- - rpc.ws.reconnect_interval_min
+  - i
+  - 1
+  - title: Minimal reconnect interval
+- - rpc.ws.reconnect_interval_max
+  - i
+  - 60
+  - title: Maximal reconnect interval
+- - rpc.ws.ssl_server_name
+  - s
+  - title: TLS Server Name
+- - rpc.ws.ssl_ca_file
+  - s
+  - title: TLS CA file
+- - rpc.ws.ssl_client_cert_file
+  - s
+  - title: TLS client cert file
+- - sd_spi
+  - o
+  - title: SD SPI settings
+- - sd_spi.pin_miso
+  - i
+  - 2
+  - title: SD SPI miso
+- - sd_spi.pin_mosi
+  - i
+  - 15
+  - title: SD SPI mosi
+- - sd_spi.pin_clk
+  - i
+  - 14
+  - title: SD SPI clk
+- - sd_spi.pin_cs
+  - i
+  - 13
+  - title: SD SPI cs

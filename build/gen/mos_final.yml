@@ -1,0 +1,370 @@
+name: empty
+type: app
+version: 1.0.0
+platform: esp32
+platforms:
+- cc3200
+- cc3220
+- esp32
+- esp8266
+- stm32
+author: Liviu Nicolescu <nliviu@gmail.com>
+description: RPC Service SD
+sources:
+- /fwbuild-volumes/2.8.1/apps/empty/esp32/build_contexts/build_ctx_030265856/src/empty_lib.c
+- /fwbuild-volumes/2.8.1/apps/empty/esp32/build_contexts/build_ctx_030265856/build/gen/mgos_deps_init.c
+- /fwbuild-volumes/2.8.1/apps/empty/esp32/build_contexts/build_ctx_030265856/libs/i2c/src/mgos_i2c.c
+- /fwbuild-volumes/2.8.1/apps/empty/esp32/build_contexts/build_ctx_030265856/libs/i2c/esp32/src/esp32_i2c_master.c
+- /fwbuild-volumes/2.8.1/apps/empty/esp32/build_contexts/build_ctx_030265856/libs/atca/src/mgos_atca.c
+- /fwbuild-volumes/2.8.1/apps/empty/esp32/build_contexts/build_ctx_030265856/libs/atca/cryptoauthlib/lib/atca_cfgs.c
+- /fwbuild-volumes/2.8.1/apps/empty/esp32/build_contexts/build_ctx_030265856/libs/atca/cryptoauthlib/lib/atca_command.c
+- /fwbuild-volumes/2.8.1/apps/empty/esp32/build_contexts/build_ctx_030265856/libs/atca/cryptoauthlib/lib/atca_device.c
+- /fwbuild-volumes/2.8.1/apps/empty/esp32/build_contexts/build_ctx_030265856/libs/atca/cryptoauthlib/lib/atca_iface.c
+- /fwbuild-volumes/2.8.1/apps/empty/esp32/build_contexts/build_ctx_030265856/libs/atca/cryptoauthlib/lib/basic/atca_basic.c
+- /fwbuild-volumes/2.8.1/apps/empty/esp32/build_contexts/build_ctx_030265856/libs/atca/cryptoauthlib/lib/basic/atca_helpers.c
+- /fwbuild-volumes/2.8.1/apps/empty/esp32/build_contexts/build_ctx_030265856/libs/atca/cryptoauthlib/lib/host/atca_host.c
+- /fwbuild-volumes/2.8.1/apps/empty/esp32/build_contexts/build_ctx_030265856/libs/vfs-common/src/mgos_vfs.c
+- /fwbuild-volumes/2.8.1/apps/empty/esp32/build_contexts/build_ctx_030265856/libs/vfs-common/src/mgos_vfs_dev.c
+- /fwbuild-volumes/2.8.1/apps/empty/esp32/build_contexts/build_ctx_030265856/libs/vfs-common/src/mgos_vfs_internal.c
+- /fwbuild-volumes/2.8.1/apps/empty/esp32/build_contexts/build_ctx_030265856/libs/vfs-common/src/esp32/esp32_fs.c
+- /fwbuild-volumes/2.8.1/apps/empty/esp32/build_contexts/build_ctx_030265856/libs/vfs-common/src/esp32/esp32_fs_crypt.c
+- /fwbuild-volumes/2.8.1/apps/empty/esp32/build_contexts/build_ctx_030265856/libs/vfs-common/src/esp32/esp32_vfs_dev_partition.c
+- /fwbuild-volumes/2.8.1/apps/empty/esp32/build_contexts/build_ctx_030265856/libs/vfs-fs-lfs/src/mgos_vfs_lfs.c
+- /fwbuild-volumes/2.8.1/apps/empty/esp32/build_contexts/build_ctx_030265856/libs/vfs-fs-lfs/src/littlefs/lfs.c
+- /fwbuild-volumes/2.8.1/apps/empty/esp32/build_contexts/build_ctx_030265856/libs/vfs-fs-lfs/src/littlefs/lfs_util.c
+- /fwbuild-volumes/2.8.1/apps/empty/esp32/build_contexts/build_ctx_030265856/libs/vfs-fs-spiffs/src/mgos_vfs_fs_spiffs.c
+- /fwbuild-volumes/2.8.1/apps/empty/esp32/build_contexts/build_ctx_030265856/libs/vfs-fs-spiffs/src/spiffs/spiffs_cache.c
+- /fwbuild-volumes/2.8.1/apps/empty/esp32/build_contexts/build_ctx_030265856/libs/vfs-fs-spiffs/src/spiffs/spiffs_check.c
+- /fwbuild-volumes/2.8.1/apps/empty/esp32/build_contexts/build_ctx_030265856/libs/vfs-fs-spiffs/src/spiffs/spiffs_gc.c
+- /fwbuild-volumes/2.8.1/apps/empty/esp32/build_contexts/build_ctx_030265856/libs/vfs-fs-spiffs/src/spiffs/spiffs_hydrogen.c
+- /fwbuild-volumes/2.8.1/apps/empty/esp32/build_contexts/build_ctx_030265856/libs/vfs-fs-spiffs/src/spiffs/spiffs_nucleus.c
+- /fwbuild-volumes/2.8.1/apps/empty/esp32/build_contexts/build_ctx_030265856/libs/core/src/mgos_core.c
+- /fwbuild-volumes/2.8.1/apps/empty/esp32/build_contexts/build_ctx_030265856/libs/rpc-common/src/mg_rpc.c
+- /fwbuild-volumes/2.8.1/apps/empty/esp32/build_contexts/build_ctx_030265856/libs/rpc-common/src/mg_rpc_channel.c
+- /fwbuild-volumes/2.8.1/apps/empty/esp32/build_contexts/build_ctx_030265856/libs/rpc-common/src/mg_rpc_channel_http.c
+- /fwbuild-volumes/2.8.1/apps/empty/esp32/build_contexts/build_ctx_030265856/libs/rpc-common/src/mgos_rpc.c
+- /fwbuild-volumes/2.8.1/apps/empty/esp32/build_contexts/build_ctx_030265856/libs/sdlib/src/mgos_sd.c
+includes:
+- /fwbuild-volumes/2.8.1/apps/empty/esp32/build_contexts/build_ctx_030265856/libs/i2c/include
+- /fwbuild-volumes/2.8.1/apps/empty/esp32/build_contexts/build_ctx_030265856/libs/atca/include
+- /fwbuild-volumes/2.8.1/apps/empty/esp32/build_contexts/build_ctx_030265856/libs/atca/cryptoauthlib/lib
+- /fwbuild-volumes/2.8.1/apps/empty/esp32/build_contexts/build_ctx_030265856/libs/mbedtls/include
+- /fwbuild-volumes/2.8.1/apps/empty/esp32/build_contexts/build_ctx_030265856/libs/mbedtls/include/esp32
+- /fwbuild-volumes/2.8.1/apps/empty/esp32/build_contexts/build_ctx_030265856/libs/mbedtls/mbedtls/include
+- /fwbuild-volumes/2.8.1/apps/empty/esp32/build_contexts/build_ctx_030265856/libs/vfs-common/include
+- /fwbuild-volumes/2.8.1/apps/empty/esp32/build_contexts/build_ctx_030265856/libs/vfs-common/include/esp32
+- /fwbuild-volumes/2.8.1/apps/empty/esp32/build_contexts/build_ctx_030265856/libs/mongoose/include
+- /fwbuild-volumes/2.8.1/apps/empty/esp32/build_contexts/build_ctx_030265856/libs/vfs-fs-lfs/include
+- /fwbuild-volumes/2.8.1/apps/empty/esp32/build_contexts/build_ctx_030265856/libs/vfs-fs-spiffs/include
+- /fwbuild-volumes/2.8.1/apps/empty/esp32/build_contexts/build_ctx_030265856/libs/vfs-fs-spiffs/include/spiffs
+- /fwbuild-volumes/2.8.1/apps/empty/esp32/build_contexts/build_ctx_030265856/libs/vfs-fs-spiffs/include/esp32
+- /fwbuild-volumes/2.8.1/apps/empty/esp32/build_contexts/build_ctx_030265856/libs/core/include
+- /fwbuild-volumes/2.8.1/apps/empty/esp32/build_contexts/build_ctx_030265856/libs/core/include/esp32
+- /fwbuild-volumes/2.8.1/apps/empty/esp32/build_contexts/build_ctx_030265856/libs/rpc-common/include
+- /fwbuild-volumes/2.8.1/apps/empty/esp32/build_contexts/build_ctx_030265856/libs/sdlib/include
+binary_libs:
+- /fwbuild-volumes/2.8.1/apps/empty/esp32/build_contexts/build_ctx_030265856/libs/mbedtls/lib/esp32/libmbedtls.a
+- /fwbuild-volumes/2.8.1/apps/empty/esp32/build_contexts/build_ctx_030265856/libs/mongoose/lib/esp32/libmongoose.a
+config_schema:
+- - i2c
+  - o
+  - title: I2C settings
+- - i2c.enable
+  - b
+  - false
+  - title: Enable I2C
+- - i2c.freq
+  - i
+  - 100000
+  - title: Clock frequency
+- - i2c.debug
+  - b
+  - false
+  - title: Debug I2C bus activity
+- - i2c.unit_no
+  - i
+  - 0
+  - title: Which hardware unit ot use, 0 or 1
+- - i2c.sda_gpio
+  - i
+  - 32
+  - title: GPIO to use for SDA
+- - i2c.scl_gpio
+  - i
+  - 33
+  - title: GPIO to use for SCL
+- - sys.atca
+  - o
+  - title: CryptoAuthLib configuration
+- - sys.atca.enable
+  - b
+  - false
+  - title: Enable the chip
+- - sys.atca.i2c_addr
+  - i
+  - 96
+  - title: I2C address of the chip
+- - sys.atca.ecdh_slots_mask
+  - i
+  - 12
+  - title: Which slots can be used for ECDH (bitmask)
+- - debug.mbedtls_level
+  - i
+  - 1
+  - title: mbedTLS debug level
+- - rpc
+  - o
+  - title: RPC settings
+- - rpc.enable
+  - b
+  - true
+  - title: Enable RPC
+- - rpc.max_frame_size
+  - i
+  - 4096
+  - title: Max Frame Size
+- - rpc.max_queue_length
+  - i
+  - 25
+  - title: Max Queue Length
+- - rpc.default_out_channel_idle_close_timeout
+  - i
+  - 10
+  - title: Default idle close timeout for outbound channels
+- - rpc.acl_file
+  - s
+  - title: File with RPC ACL JSON
+- - rpc.auth_domain
+  - s
+  - title: Realm to use for digest authentication
+- - rpc.auth_file
+  - s
+  - title: File with user credentials in the htdigest format
+- - rpc.ws
+  - o
+  - title: RPC over WebSocket settings
+- - rpc.ws.enable
+  - b
+  - true
+  - title: Enable RPC over WebSocket
+- - rpc.ws.server_address
+  - s
+  - ""
+  - title: Cloud server address
+- - rpc.ws.reconnect_interval_min
+  - i
+  - 1
+  - title: Minimal reconnect interval
+- - rpc.ws.reconnect_interval_max
+  - i
+  - 60
+  - title: Maximal reconnect interval
+- - rpc.ws.ssl_server_name
+  - s
+  - title: TLS Server Name
+- - rpc.ws.ssl_ca_file
+  - s
+  - title: TLS CA file
+- - rpc.ws.ssl_client_cert_file
+  - s
+  - title: TLS client cert file
+- - sd_spi
+  - o
+  - title: SD SPI settings
+- - sd_spi.pin_miso
+  - i
+  - 2
+  - title: SD SPI miso
+- - sd_spi.pin_mosi
+  - i
+  - 15
+  - title: SD SPI mosi
+- - sd_spi.pin_clk
+  - i
+  - 14
+  - title: SD SPI clk
+- - sd_spi.pin_cs
+  - i
+  - 13
+  - title: SD SPI cs
+build_vars:
+  BOARD: ""
+  ESP_IDF_EXTRA_COMPONENTS: ' fatfs sdmmc wear_levelling'
+  ESP_IDF_SDKCONFIG_OPTS: |2
+     CONFIG_SUPPORT_STATIC_ALLOCATION=y
+  MGOS_ENABLE_I2C_GPIO: "0"
+  MGOS_HAVE_ATCA: "1"
+  MGOS_HAVE_CORE: "1"
+  MGOS_HAVE_I2C: "1"
+  MGOS_HAVE_MBEDTLS: "1"
+  MGOS_HAVE_MONGOOSE: "1"
+  MGOS_HAVE_RPC_COMMON: "1"
+  MGOS_HAVE_SDLIB: "1"
+  MGOS_HAVE_VFS_COMMON: "1"
+  MGOS_HAVE_VFS_FS_LFS: "1"
+  MGOS_HAVE_VFS_FS_SPIFFS: "1"
+cdefs:
+  LFS_NO_DEBUG: "1"
+  MBEDTLS_ECP_ATCA: "1"
+  MBEDTLS_USER_CONFIG_FILE: \"mbedtls_platform_config.h\"
+  MBEDTLS_X509_CA_CHAIN_ON_DISK: "1"
+  MG_ENABLE_DNS: "1"
+  MG_ENABLE_DNS_SERVER: "1"
+  MG_ENABLE_MQTT: "1"
+  MG_ENABLE_SNTP: "1"
+  MG_ENABLE_SSL: "1"
+  MG_SSL_IF: MG_SSL_IF_MBEDTLS
+  MG_SSL_IF_MBEDTLS_FREE_CERTS: "1"
+  MG_SSL_IF_MBEDTLS_MAX_FRAG_LEN: "1024"
+  MGOS_ENABLE_RPC_CHANNEL_HTTP: "1"
+  MGOS_ENABLE_SYS_SERVICE: "1"
+  MGOS_HAVE_ATCA: "1"
+  MGOS_HAVE_CORE: "1"
+  MGOS_HAVE_I2C: "1"
+  MGOS_HAVE_MBEDTLS: "1"
+  MGOS_HAVE_MONGOOSE: "1"
+  MGOS_HAVE_RPC_COMMON: "1"
+  MGOS_HAVE_SDLIB: "1"
+  MGOS_HAVE_VFS_COMMON: "1"
+  MGOS_HAVE_VFS_FS_LFS: "1"
+  MGOS_HAVE_VFS_FS_SPIFFS: "1"
+tags:
+- c
+libs_version: 2.8.1
+modules_version: 2.8.1
+mongoose_os_version: 2.8.1
+manifest_version: "2017-09-29"
+libs_handled:
+- lib:
+    origin: https://github.com/mongoose-os-libs/i2c
+    location: https://github.com/mongoose-os-libs/i2c
+    name: i2c
+  path: /fwbuild-volumes/2.8.1/apps/empty/esp32/build_contexts/build_ctx_030265856/libs/i2c
+  init_deps:
+  - core
+  sources:
+  - /fwbuild-volumes/2.8.1/apps/empty/esp32/build_contexts/build_ctx_030265856/libs/i2c/src/mgos_i2c.c
+  - /fwbuild-volumes/2.8.1/apps/empty/esp32/build_contexts/build_ctx_030265856/libs/i2c/esp32/src/esp32_i2c_master.c
+- lib:
+    origin: https://github.com/mongoose-os-libs/atca
+    location: https://github.com/mongoose-os-libs/atca
+    name: atca
+  path: /fwbuild-volumes/2.8.1/apps/empty/esp32/build_contexts/build_ctx_030265856/libs/atca
+  deps:
+  - i2c
+  init_deps:
+  - i2c
+  sources:
+  - /fwbuild-volumes/2.8.1/apps/empty/esp32/build_contexts/build_ctx_030265856/libs/atca/src/mgos_atca.c
+  - /fwbuild-volumes/2.8.1/apps/empty/esp32/build_contexts/build_ctx_030265856/libs/atca/cryptoauthlib/lib/atca_cfgs.c
+  - /fwbuild-volumes/2.8.1/apps/empty/esp32/build_contexts/build_ctx_030265856/libs/atca/cryptoauthlib/lib/atca_command.c
+  - /fwbuild-volumes/2.8.1/apps/empty/esp32/build_contexts/build_ctx_030265856/libs/atca/cryptoauthlib/lib/atca_device.c
+  - /fwbuild-volumes/2.8.1/apps/empty/esp32/build_contexts/build_ctx_030265856/libs/atca/cryptoauthlib/lib/atca_iface.c
+  - /fwbuild-volumes/2.8.1/apps/empty/esp32/build_contexts/build_ctx_030265856/libs/atca/cryptoauthlib/lib/basic/atca_basic.c
+  - /fwbuild-volumes/2.8.1/apps/empty/esp32/build_contexts/build_ctx_030265856/libs/atca/cryptoauthlib/lib/basic/atca_helpers.c
+  - /fwbuild-volumes/2.8.1/apps/empty/esp32/build_contexts/build_ctx_030265856/libs/atca/cryptoauthlib/lib/host/atca_host.c
+- lib:
+    origin: https://github.com/mongoose-os-libs/mbedtls
+    location: https://github.com/mongoose-os-libs/mbedtls
+    name: mbedtls
+  path: /fwbuild-volumes/2.8.1/apps/empty/esp32/build_contexts/build_ctx_030265856/libs/mbedtls
+- lib:
+    origin: https://github.com/mongoose-os-libs/vfs-common
+    location: https://github.com/mongoose-os-libs/vfs-common
+    name: vfs-common
+  path: /fwbuild-volumes/2.8.1/apps/empty/esp32/build_contexts/build_ctx_030265856/libs/vfs-common
+  sources:
+  - /fwbuild-volumes/2.8.1/apps/empty/esp32/build_contexts/build_ctx_030265856/libs/vfs-common/src/mgos_vfs.c
+  - /fwbuild-volumes/2.8.1/apps/empty/esp32/build_contexts/build_ctx_030265856/libs/vfs-common/src/mgos_vfs_dev.c
+  - /fwbuild-volumes/2.8.1/apps/empty/esp32/build_contexts/build_ctx_030265856/libs/vfs-common/src/mgos_vfs_internal.c
+  - /fwbuild-volumes/2.8.1/apps/empty/esp32/build_contexts/build_ctx_030265856/libs/vfs-common/src/esp32/esp32_fs.c
+  - /fwbuild-volumes/2.8.1/apps/empty/esp32/build_contexts/build_ctx_030265856/libs/vfs-common/src/esp32/esp32_fs_crypt.c
+  - /fwbuild-volumes/2.8.1/apps/empty/esp32/build_contexts/build_ctx_030265856/libs/vfs-common/src/esp32/esp32_vfs_dev_partition.c
+- lib:
+    origin: https://github.com/mongoose-os-libs/mongoose
+    location: https://github.com/mongoose-os-libs/mongoose
+    name: mongoose
+  path: /fwbuild-volumes/2.8.1/apps/empty/esp32/build_contexts/build_ctx_030265856/libs/mongoose
+  deps:
+  - mbedtls
+  - vfs-common
+- lib:
+    origin: https://github.com/mongoose-os-libs/vfs-fs-lfs
+    location: https://github.com/mongoose-os-libs/vfs-fs-lfs
+    name: vfs-fs-lfs
+  path: /fwbuild-volumes/2.8.1/apps/empty/esp32/build_contexts/build_ctx_030265856/libs/vfs-fs-lfs
+  deps:
+  - vfs-common
+  init_deps:
+  - vfs-common
+  sources:
+  - /fwbuild-volumes/2.8.1/apps/empty/esp32/build_contexts/build_ctx_030265856/libs/vfs-fs-lfs/src/mgos_vfs_lfs.c
+  - /fwbuild-volumes/2.8.1/apps/empty/esp32/build_contexts/build_ctx_030265856/libs/vfs-fs-lfs/src/littlefs/lfs.c
+  - /fwbuild-volumes/2.8.1/apps/empty/esp32/build_contexts/build_ctx_030265856/libs/vfs-fs-lfs/src/littlefs/lfs_util.c
+- lib:
+    origin: https://github.com/mongoose-os-libs/vfs-fs-spiffs
+    location: https://github.com/mongoose-os-libs/vfs-fs-spiffs
+    name: vfs-fs-spiffs
+  path: /fwbuild-volumes/2.8.1/apps/empty/esp32/build_contexts/build_ctx_030265856/libs/vfs-fs-spiffs
+  deps:
+  - vfs-common
+  init_deps:
+  - vfs-common
+  sources:
+  - /fwbuild-volumes/2.8.1/apps/empty/esp32/build_contexts/build_ctx_030265856/libs/vfs-fs-spiffs/src/mgos_vfs_fs_spiffs.c
+  - /fwbuild-volumes/2.8.1/apps/empty/esp32/build_contexts/build_ctx_030265856/libs/vfs-fs-spiffs/src/spiffs/spiffs_cache.c
+  - /fwbuild-volumes/2.8.1/apps/empty/esp32/build_contexts/build_ctx_030265856/libs/vfs-fs-spiffs/src/spiffs/spiffs_check.c
+  - /fwbuild-volumes/2.8.1/apps/empty/esp32/build_contexts/build_ctx_030265856/libs/vfs-fs-spiffs/src/spiffs/spiffs_gc.c
+  - /fwbuild-volumes/2.8.1/apps/empty/esp32/build_contexts/build_ctx_030265856/libs/vfs-fs-spiffs/src/spiffs/spiffs_hydrogen.c
+  - /fwbuild-volumes/2.8.1/apps/empty/esp32/build_contexts/build_ctx_030265856/libs/vfs-fs-spiffs/src/spiffs/spiffs_nucleus.c
+- lib:
+    origin: https://github.com/mongoose-os-libs/core
+    location: https://github.com/mongoose-os-libs/core
+    name: core
+  path: /fwbuild-volumes/2.8.1/apps/empty/esp32/build_contexts/build_ctx_030265856/libs/core
+  deps:
+  - mongoose
+  - vfs-fs-lfs
+  - vfs-fs-spiffs
+  init_deps:
+  - mongoose
+  - vfs-common
+  - vfs-fs-lfs
+  - vfs-fs-spiffs
+  sources:
+  - /fwbuild-volumes/2.8.1/apps/empty/esp32/build_contexts/build_ctx_030265856/libs/core/src/mgos_core.c
+- lib:
+    origin: https://github.com/mongoose-os-libs/rpc-common
+    location: https://github.com/mongoose-os-libs/rpc-common
+    name: rpc-common
+  path: /fwbuild-volumes/2.8.1/apps/empty/esp32/build_contexts/build_ctx_030265856/libs/rpc-common
+  deps:
+  - mongoose
+  init_deps:
+  - core
+  - mongoose
+  sources:
+  - /fwbuild-volumes/2.8.1/apps/empty/esp32/build_contexts/build_ctx_030265856/libs/rpc-common/src/mg_rpc.c
+  - /fwbuild-volumes/2.8.1/apps/empty/esp32/build_contexts/build_ctx_030265856/libs/rpc-common/src/mg_rpc_channel.c
+  - /fwbuild-volumes/2.8.1/apps/empty/esp32/build_contexts/build_ctx_030265856/libs/rpc-common/src/mg_rpc_channel_http.c
+  - /fwbuild-volumes/2.8.1/apps/empty/esp32/build_contexts/build_ctx_030265856/libs/rpc-common/src/mgos_rpc.c
+- lib:
+    origin: https://github.com/nliviu/sdlib
+    location: https://github.com/nliviu/sdlib
+    name: sdlib
+  path: /fwbuild-volumes/2.8.1/apps/empty/esp32/build_contexts/build_ctx_030265856/libs/sdlib
+  init_deps:
+  - core
+  sources:
+  - /fwbuild-volumes/2.8.1/apps/empty/esp32/build_contexts/build_ctx_030265856/libs/sdlib/src/mgos_sd.c
+init_deps:
+- mongoose
+- vfs-common
+- vfs-fs-lfs
+- vfs-fs-spiffs
+- core
+- i2c
+- atca
+- mbedtls
+- rpc-common
+- sdlib
