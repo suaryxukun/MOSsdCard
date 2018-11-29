@@ -1,5 +1,5 @@
 author: Liviu Nicolescu <nliviu@gmail.com>
-description: RPC Service SD
+description: SD library
 version: 1.0.0
 
 manifest_version: 2017-09-29
@@ -8,19 +8,26 @@ libs_version: ${mos.version}
 modules_version: ${mos.version}
 mongoose_os_version: ${mos.version}
 
+# Optional. List of tags for online search.
 tags:
-  - c
+  - c++
 
 platform: esp32
 
+includes:
+  - include
+
+# List of files / directories with C sources. No slashes at the end of dir names.
 sources:
   - src
 
 config_schema:
-
-libs:
-  - origin: https://github.com/mongoose-os-libs/rpc-common
-  - origin: /home/gabriel/Documents/smartgit/empty/lib/sdlib
-
+ - ["sd_spi", "o", {title: "SD SPI settings"}]
+ - ["sd_spi.pin_miso", "i", 23, {title: "SD SPI miso"}]  # hardwired for Lolin32 Pro
+ - ["sd_spi.pin_mosi", "i", 19, {title: "SD SPI mosi"}] # hardwired for Lolin32 Pro
+ - ["sd_spi.pin_clk", "i", 18, {title: "SD SPI clk"}]   # hardwired for Lolin32 Pro
+ - ["sd_spi.pin_cs", "i", 5, {title: "SD SPI cs"}]     # hardwired for Lolin32 Pro
+  
 build_vars:
-  ESP_IDF_EXTRA_COMPONENTS: "${build_vars.ESP_IDF_EXTRA_COMPONENTS} fatfs wear_levelling sdmmc"
+  ESP_IDF_EXTRA_COMPONENTS: "${build_vars.ESP_IDF_EXTRA_COMPONENTS} fatfs sdmmc wear_levelling"
+
